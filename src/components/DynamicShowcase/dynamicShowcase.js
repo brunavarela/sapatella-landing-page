@@ -1,6 +1,8 @@
 import styled from "styled-components";
 
 export const DynamicShowCaseContainer = styled.section`
+  display: flex;
+  justify-content: center;
   width: 100%;
   background-color: var(--light-gray);
   padding: 32px 155px;
@@ -10,7 +12,7 @@ export const DynamicShowCaseContainer = styled.section`
 export const DivSection = styled.div`
   width: 100%;
   display: flex;
-  justify-content: space-between;
+  max-width: 1200px;
 `;
 
 export const DivContent = styled.div`

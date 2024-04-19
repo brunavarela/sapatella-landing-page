@@ -1,4 +1,4 @@
-import { CategoryContainer, DivList } from "./category";
+import { SectionTitle, CategoryContainer, DivList } from "./category";
 import category1 from "../../assets/img/category1.jpg";
 import category2 from "../../assets/img/category2.jpg";
 import category3 from "../../assets/img/category3.jpg";
@@ -6,12 +6,11 @@ import category4 from "../../assets/img/category4.jpg";
 import category5 from "../../assets/img/category5.jpg";
 import category6 from "../../assets/img/category6.jpg";
 
-
 export const Category = () => {
   return (
     <>
+      <SectionTitle>Compre por categoria</SectionTitle>
       <CategoryContainer>
-        <h1>Compre por categoria</h1>
         <DivList>
           <ul>
             <li>

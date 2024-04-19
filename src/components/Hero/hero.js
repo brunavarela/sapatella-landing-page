@@ -35,6 +35,10 @@ export const ImageContainer = styled.div`
   width: 100%;
   justify-content: space-between;
   align-items: center;
+
+  div {
+    cursor: pointer;
+  }
 `;
 
 export const DivImage = styled.div`

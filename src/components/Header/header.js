@@ -10,6 +10,7 @@ export const HeaderContainer = styled.div`
   align-items: center;
   padding-left: 56px;
   padding-right: 56px;
+  
 
   background: linear-gradient(
     to bottom,

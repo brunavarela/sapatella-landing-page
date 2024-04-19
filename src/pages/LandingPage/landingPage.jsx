@@ -4,6 +4,7 @@ import { Hero } from "../../components/Hero/hero.jsx";
 import { PaymentBar } from "../../components/PaymentBar/paymentBar.jsx";
 import { Category } from "../../components/Category/category.jsx";
 import { DynamicShowCase } from "../../components/DynamicShowCase/dynamicShowCase.jsx";
+import { Favorites } from "../../components/Favorites/favorites.jsx";
 
 export const LandingPage = () => {
   return (
@@ -16,6 +17,7 @@ export const LandingPage = () => {
         <PaymentBar />
         <Category />
         <DynamicShowCase />
+        <Favorites />
       </MainContainer>
       <FooterContainer></FooterContainer>
     </>

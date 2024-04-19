@@ -1,6 +1,8 @@
 import styled from "styled-components";
 
 export const PaymentBarContainer = styled.div`
+  display: flex;
+  justify-content: center;
   width: 100%;
   height: 112px;
   background-color: var(--light-gray);
@@ -9,6 +11,7 @@ export const PaymentBarContainer = styled.div`
 
 export const DivList = styled.div`
   width: 100%;
+  max-width: 1445px;
 
   ul {
     display: flex;
