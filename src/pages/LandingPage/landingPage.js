@@ -1,5 +1,6 @@
 import styled from "styled-components";
 
-export const Title = styled.h1`
-  font-weight: 600px;
+export const MainContainer = styled.div`
+  width: 100%;
+  background-color: var(--white);
 `;

@@ -10,8 +10,10 @@ export default createGlobalStyle`
     };
 
     :root {
+        --wine: #2C0713;
         --pink: #CF215B;
         --black: #202124;
+        --gray: #D3D3D3;
         --light-gray: #F5F5F5;
         --dark-gray: #4F4F4F;
         --white: #FFFFFF;
@@ -23,29 +25,17 @@ export default createGlobalStyle`
         background-color: var(--white)
     }
 
-    h1 {
-        color: var(--dark-grey);
+    h1, h2 {
+        color: var(--dark-gray);
         font-size: 24px;
     }
 
-    h2 {
+    h3 {
         color: var(--dark-grey);
         font-size: 20px;    }
 
     button {
         font-size: 16px;
-    }
-
-    p {
-        font-size: 14px;
-    }
-
-    text {
-        font-size: 12px;
-    }
-
-    span {
-        font-size: 10px;
     }
 
     a {

@@ -4,8 +4,12 @@ export const HeaderContainer = styled.div`
   width: 100%;
   padding: 16px 56px;
   display: flex;
-  justify-content: space-evenly;
+  z-index: 1;
+  justify-content: space-between;
   align-items: center;
+  position: relative;
+  padding-left: 56px;
+  padding-right: 56px;
 
   background: linear-gradient(
     to bottom,
@@ -40,16 +44,16 @@ export const InputContainer = styled.div`
 export const Input = styled.input`
   width: 100%;
   height: 100%;
-  background-color: var(--white);
-  opacity: 0.7;
-  box-shadow: inset 0 0 0 1px #d3d3d3;
-  color: var(--white);
+  background-color: rgba(255, 255, 255, 0.1);
+  box-shadow: inset 0 0 0 1.5px rgba(211, 211, 211, 0.1);
+  color: var(--dark-gray);
   font-size: 16px;
   padding: 8px 36px 8px 12px;
   border: none;
 
   &::placeholder {
-    color: var(--light-gray);
+    opacity: 1;
+    color: var(--gray);
   }
 `;
 
