@@ -33,10 +33,13 @@ export default createGlobalStyle`
 
     h3 {
         color: var(--dark-grey);
-        font-size: 20px;    }
+        font-size: 20px;   
+        font-weight: 400; }
 
     button {
         font-size: 16px;
+        font-family: "DM Sans", sans-serif;
+
     }
 
     a {
