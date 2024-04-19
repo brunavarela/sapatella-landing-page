@@ -2,8 +2,7 @@ import styled from "styled-components";
 
 export const HeroContainer = styled.div`
   width: 100%;
-  position: absolute;
-  top: 1px;
+  position: relative;
   background-color: var(--white);
 `;
 
@@ -87,6 +86,6 @@ export const SlideFooter = styled.div`
   background: linear-gradient(
     to top,
     rgba(22, 22, 22, 1) 0%,
-    rgba(22, 22, 22, 0) 100% 
+    rgba(22, 22, 22, 0) 100%
   );
 `;
