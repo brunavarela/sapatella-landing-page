@@ -5,12 +5,14 @@ import {
   ImageContainer,
   DivImage,
   ImageHeader,
+  SlideFooter,
 } from "./hero";
 import image1 from "../../assets/img/image1.jpg";
 import image2 from "../../assets/img/image2.jpg";
 import image3 from "../../assets/img/image3.jpg";
 import arrowLeft from "../../assets/icons/arrow-left.svg";
 import arrowRight from "../../assets/icons/arrow-right.svg";
+import dots from "../../assets/icons/dots.svg";
 
 export const Hero = () => {
   return (
@@ -32,7 +34,9 @@ export const Hero = () => {
             <DivImage>
               <ImageHeader>
                 <h1>#SuperBazar</h1>
-                <span>até <text>50%OFF</text></span>
+                <p>
+                  até <span>50%OFF</span>
+                </p>
               </ImageHeader>
               <div>
                 <img src={image2} alt="Sandália"></img>
@@ -44,6 +48,11 @@ export const Hero = () => {
             </div>
           </ImageContainer>
         </SlideContainer>
+        <SlideFooter>
+          <div>
+            <img src={dots}></img>
+          </div>
+        </SlideFooter>
       </HeroContainer>
     </>
   );

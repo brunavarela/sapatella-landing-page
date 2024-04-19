@@ -28,6 +28,7 @@ export default createGlobalStyle`
     h1, h2 {
         color: var(--dark-gray);
         font-size: 24px;
+        font-weight: 400;
     }
 
     h3 {

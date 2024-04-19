@@ -23,7 +23,6 @@ export const Background = styled.div`
 `;
 
 export const SlideContainer = styled.div`
-  display: flex;
   justify-content: center;
   width: 100%;
   padding-left: 56px;
@@ -65,12 +64,29 @@ export const ImageHeader = styled.div`
   width: 100%;
 
   span {
-    color: var(--wine);
-  }
-
-  text {
     color: var(--pink);
     font-size: 24px;
     font-weight: 700;
   }
+
+  p {
+    display: inline-block;
+    color: var(--wine);
+  }
+`;
+
+export const SlideFooter = styled.div`
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  position: absolute;
+  bottom: 0%;
+
+  padding: 24px;
+
+  background: linear-gradient(
+    to top,
+    rgba(22, 22, 22, 1) 0%,
+    rgba(22, 22, 22, 0) 100% 
+  );
 `;
