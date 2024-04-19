@@ -12,8 +12,8 @@ export default createGlobalStyle`
     :root {
         --pink: #CF215B;
         --black: #202124;
-        --light-grey: #F5F5F5;
-        --dark-grey: #4F4F4F;
+        --light-gray: #F5F5F5;
+        --dark-gray: #4F4F4F;
         --white: #FFFFFF;
     }
 
@@ -49,7 +49,9 @@ export default createGlobalStyle`
     }
 
     a {
+        font-size: 16px;
         text-decoration: none;
+        cursor: pointer;
     }
 
     button {
