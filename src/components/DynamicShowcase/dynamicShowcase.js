@@ -33,6 +33,10 @@ export const DivContent = styled.div`
     color: var(--white);
     width: 156px;
     margin-top: 32px;
+
+    &:hover {
+    background-color: #E5336E;
+  }
   }
 `;
 

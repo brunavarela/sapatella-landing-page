@@ -4,12 +4,18 @@ import {
   FavoritesContainer,
   DivList,
   DivSpan,
+  ImageWrapper,
+  ImageOverlay,
+  DivSize,
+  Button,
   DivFooter,
 } from "./favorites";
-import arrowLeft from "../../assets/icons/arrow-left.svg";
-import arrowRight from "../../assets/icons/arrow-right.svg";
 import { SlHeart } from "react-icons/sl";
 import { FaHeart } from "react-icons/fa";
+import chevronLeft from "../../assets/icons/chevron-left-alt.svg";
+import chevronRight from "../../assets/icons/chevron-right-alt.svg";
+import arrowLeft from "../../assets/icons/arrow-left.svg";
+import arrowRight from "../../assets/icons/arrow-right.svg";
 import dots from "../../assets/icons/dots.svg";
 import favorite1 from "../../assets/img/favorite1.jpg";
 import favorite2 from "../../assets/img/favorite2.jpg";
@@ -28,35 +34,70 @@ export const Favorites = () => {
       name: "Tênis Clean Urbano - Branco",
       price: 209.9,
       sale: 169.9,
-      paymentOption: "ou 6x de R$ 28,31 sem juros",
+      paymentOption: "ou 6x de R$ 28,31 sem juros",
       image: favorite1,
+      size: ["34", "35", "36", "37", "38"],
     },
     {
       name: "Sandália Soft Metalizado - Preta",
       price: 209.9,
       sale: 169.9,
-      paymentOption: "ou 6x de R$ 28,31 sem juros",
+      paymentOption: "ou 6x de R$ 28,31 sem juros",
       image: favorite2,
+      size: ["34", "35", "36", "37", "38"],
     },
     {
       name: "Sapatilha Elegance - Rose",
       price: 209.9,
       sale: 169.9,
-      paymentOption: "ou 6x de R$ 28,31 sem juros",
+      paymentOption: "ou 6x de R$ 28,31 sem juros",
       image: favorite3,
+      size: ["34", "35", "36", "37", "38"],
     },
     {
       name: "Plataforma em Nobuck - Whisky",
       price: 209.9,
       sale: 169.9,
-      paymentOption: "ou 6x de R$ 28,31 sem juros",
+      paymentOption: "ou 6x de R$ 28,31 sem juros",
       image: favorite4,
+      size: ["34", "35", "36", "37", "38"],
     },
   ]);
 
   const [heartClicked, setHeartClicked] = useState(
     Array(products.length).fill(false)
   );
+
+  const [hoveredIndex, setHoveredIndex] = useState(null);
+
+  const [selectedSizes, setSelectedSizes] = useState(products.map(() => 0));
+
+  const handleSelectSize = (productIndex, sizeIndex) => {
+    setSelectedSizes((prevSizes) => {
+      const updatedSizes = [...prevSizes];
+      updatedSizes[productIndex] = sizeIndex;
+      return updatedSizes;
+    });
+  };
+
+  const handlePrevSize = (index) => {
+    setSelectedSizes((prevSizes) => {
+      const updatedSizes = [...prevSizes];
+      updatedSizes[index] =
+        (prevSizes[index] - 1 + products[index].size.length) %
+        products[index].size.length;
+      return updatedSizes;
+    });
+  };
+
+  const handleNextSize = (index) => {
+    setSelectedSizes((prevSizes) => {
+      const updatedSizes = [...prevSizes];
+      updatedSizes[index] =
+        (prevSizes[index] + 1) % products[index].size.length;
+      return updatedSizes;
+    });
+  };
 
   return (
     <>
@@ -79,7 +120,57 @@ export const Favorites = () => {
                     )}
                   </div>
                 </DivSpan>
-                <img src={product.image} alt="Tênis branco" />
+                <ImageWrapper
+                  onMouseEnter={() => setHoveredIndex(index)}
+                  onMouseLeave={() => setHoveredIndex(null)}
+                >
+                  <img src={product.image} alt={product.name} />
+                  {hoveredIndex === index && (
+                    <ImageOverlay>
+                      <DivSize>
+                        <p className="sizeTitle">Selecione um tamanho</p>
+                        <div className="sizeOptions">
+                          <div
+                            className="chevronLeft"
+                            onClick={() => handlePrevSize(index)}
+                          >
+                            <img
+                              src={chevronLeft}
+                              alt="Seta para esquerda"
+                            ></img>
+                          </div>
+                          <ul className="ulSizes">
+                            {product.size.map((size, sizeIndex) => (
+                              <li
+                                key={sizeIndex}
+                                className={`liSizes ${
+                                  selectedSizes[index] === sizeIndex
+                                    ? "selected"
+                                    : ""
+                                }`}
+                                onClick={() =>
+                                  handleSelectSize(index, sizeIndex)
+                                }
+                              >
+                                {size}
+                              </li>
+                            ))}
+                          </ul>
+                          <div
+                            className="chevronRight"
+                            onClick={() => handleNextSize(index)}
+                          >
+                            <img
+                              src={chevronRight}
+                              alt="Seta para esquerda"
+                            ></img>
+                          </div>
+                        </div>
+                      </DivSize>
+                      <Button>Adicionar à sacola</Button>
+                    </ImageOverlay>
+                  )}
+                </ImageWrapper>
                 <p>{product.name}</p>
                 <h4>
                   {product.sale.toLocaleString("pt-BR", {

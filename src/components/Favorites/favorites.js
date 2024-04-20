@@ -57,7 +57,7 @@ export const DivList = styled.section`
   .arrowLeft {
     z-index: 1;
     position: absolute;
-    bottom: 55%;
+    bottom: 60%;
     left: -2%;
     cursor: pointer;
   }
@@ -65,7 +65,7 @@ export const DivList = styled.section`
   .arrowRight {
     z-index: 1;
     position: absolute;
-    bottom: 55%;
+    bottom: 60%;
     right: -2%;
     cursor: pointer;
   }
@@ -99,6 +99,100 @@ export const DivSpan = styled.div`
     :hover {
       color: var(--pink);
     }
+  }
+`;
+
+export const ImageWrapper = styled.div`
+  position: relative;
+  display: inline-block;
+
+  img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+  }
+`;
+
+export const ImageOverlay = styled.div`
+  position: absolute;
+  bottom: 12px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: center;
+  opacity: 0;
+
+  ${ImageWrapper}:hover & {
+    opacity: 1;
+  }
+`;
+
+export const DivSize = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  background-color: rgba(231, 234, 225, 0.25);
+  border-top: 1px solid var(--gray);
+  backdrop-filter: blur(10px);
+  padding: 8px 10px;
+
+  .sizeTitle {
+    text-align: center;
+  }
+
+  .sizeOptions {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 8px;
+  }
+
+  .chevronLeft {
+    margin-top: 10px;
+    margin-right: 20px;
+  }
+
+  .chevronRight {
+    margin-top: 10px;
+    margin-left: 20px;
+  }
+
+  .ulSizes {
+    display: flex;
+    gap: 8px;
+  }
+
+  .liSizes {
+    box-shadow: inset 0 0 0 1.5px var(--gray);
+    color: var(--dark-gray);
+    background-color: var(--white);
+    padding: 6px;
+    cursor: pointer;
+
+    &.selected {
+      background-color: var(--pink);
+      color: var(--white);
+      box-shadow: none;
+    }
+  }
+`;
+
+export const Button = styled.button`
+  width: 100%;
+  height: 32px;
+  background-color: var(--pink);
+  color: var(--white);
+  font-size: 14px;
+  cursor: pointer;
+  transition: 0.3s;
+
+  &:hover {
+    background-color: #e5336e;
   }
 `;
 

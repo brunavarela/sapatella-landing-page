@@ -56,6 +56,10 @@ export const DivImage = styled.div`
     position: absolute;
     bottom: -4%;
     padding: 14px 48px;
+
+    &:hover {
+    background-color: #E5336E;
+  }
   }
 `;
 
