@@ -35,8 +35,8 @@ export const DivContent = styled.div`
     margin-top: 32px;
 
     &:hover {
-    background-color: #E5336E;
-  }
+      background-color: #e5336e;
+    }
   }
 `;
 

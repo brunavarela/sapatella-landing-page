@@ -9,6 +9,7 @@ import { ProductsGallery } from "../../components/ProductsGallery/productsGaller
 import { FeaturedProducts } from "../../components/FeaturedProducts/featuredProducts.jsx";
 import { ImageSection } from "../../components/ImageSection/imageSection.jsx";
 import { About } from "../../components/About/about.jsx";
+import { Register } from "../../components/Register/register.jsx";
 
 export const LandingPage = () => {
   return (
@@ -26,6 +27,7 @@ export const LandingPage = () => {
         <FeaturedProducts />
         <ImageSection />
         <About />
+        <Register />
       </MainContainer>
       <FooterContainer></FooterContainer>
     </>
