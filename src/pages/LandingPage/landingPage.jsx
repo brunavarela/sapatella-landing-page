@@ -10,6 +10,7 @@ import { FeaturedProducts } from "../../components/FeaturedProducts/featuredProd
 import { ImageSection } from "../../components/ImageSection/imageSection.jsx";
 import { About } from "../../components/About/about.jsx";
 import { Register } from "../../components/Register/register.jsx";
+import { Footer } from "../../components/Footer/footer.jsx";
 
 export const LandingPage = () => {
   return (
@@ -29,7 +30,9 @@ export const LandingPage = () => {
         <About />
         <Register />
       </MainContainer>
-      <FooterContainer></FooterContainer>
+      <FooterContainer>
+        <Footer></Footer>
+      </FooterContainer>
     </>
   );
 };
