@@ -8,6 +8,7 @@ import { Favorites } from "../../components/Favorites/favorites.jsx";
 import { ProductsGallery } from "../../components/ProductsGallery/productsGallery.jsx";
 import { FeaturedProducts } from "../../components/FeaturedProducts/featuredProducts.jsx";
 import { ImageSection } from "../../components/ImageSection/imageSection.jsx";
+import { About } from "../../components/About/about.jsx";
 
 export const LandingPage = () => {
   return (
@@ -24,6 +25,7 @@ export const LandingPage = () => {
         <ProductsGallery />
         <FeaturedProducts />
         <ImageSection />
+        <About />
       </MainContainer>
       <FooterContainer></FooterContainer>
     </>
