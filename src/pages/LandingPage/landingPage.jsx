@@ -6,6 +6,8 @@ import { Category } from "../../components/Category/category.jsx";
 import { DynamicShowCase } from "../../components/DynamicShowCase/dynamicShowCase.jsx";
 import { Favorites } from "../../components/Favorites/favorites.jsx";
 import { ProductsGallery } from "../../components/ProductsGallery/productsGallery.jsx";
+import { FeaturedProducts } from "../../components/FeaturedProducts/featuredProducts.jsx";
+import { ImageSection } from "../../components/ImageSection/imageSection.jsx";
 
 export const LandingPage = () => {
   return (
@@ -20,6 +22,8 @@ export const LandingPage = () => {
         <DynamicShowCase />
         <Favorites />
         <ProductsGallery />
+        <FeaturedProducts />
+        <ImageSection />
       </MainContainer>
       <FooterContainer></FooterContainer>
     </>

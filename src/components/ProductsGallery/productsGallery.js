@@ -90,7 +90,7 @@ export const DivContentRight = styled.div`
 
   .imgRight {
     width: 376px;
-    border: 1px solid #000;
+    border: 1px solid var(--black);
   }
 
   .buttonRight {

@@ -22,6 +22,7 @@ import favorite2 from "../../assets/img/favorite2.jpg";
 import favorite3 from "../../assets/img/favorite3.jpg";
 import favorite4 from "../../assets/img/favorite4.jpg";
 
+
 export const Favorites = () => {
   const handleClick = (index) => {
     const updatedHeartClicked = [...heartClicked];

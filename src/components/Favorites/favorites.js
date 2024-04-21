@@ -13,7 +13,7 @@ export const FavoritesContainer = styled.section`
   padding: 32px 56px;
 `;
 
-export const DivList = styled.section`
+export const DivList = styled.div`
   width: 100%;
   max-width: 1445px;
   position: relative;
