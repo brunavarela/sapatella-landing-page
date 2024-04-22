@@ -21,6 +21,10 @@ export const DivList = styled.div`
   ul {
     display: flex;
     justify-content: space-between;
+
+    :hover {
+      color: var(--pink);
+    }
   }
 
   li {
