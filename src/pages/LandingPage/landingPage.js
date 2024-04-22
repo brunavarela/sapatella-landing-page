@@ -14,6 +14,4 @@ export const MainContainer = styled.div`
 export const FooterContainer = styled.div`
   width: 100%;
   background-color: var(--white);
-  position: absolute;
-  bottom: 0%;
 `;

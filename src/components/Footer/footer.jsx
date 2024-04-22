@@ -1,15 +1,11 @@
 import {
   FooterContainer,
   FirstDiv,
-  DivSocial,
-  ListAbout,
-  ListAccount,
-  ListSuport,
-  DivPayment,
-  ImgPayment,
-  ImgSecurity,
+  DivList,
+  ImgPaymentSecurity,
+  DivHr,
   SecondDiv,
-  imgDiv,
+  ImgDiv,
 } from "./footer";
 import logoPreta from "../../assets/general/logo-preta.png";
 import instagram from "../../assets/social-icons/InstagramLogo.svg";
@@ -32,15 +28,15 @@ export const Footer = () => {
     <>
       <FooterContainer>
         <FirstDiv>
-          <DivSocial>
+          <DivList>
             <img src={logoPreta} alt="Logo Sapatella preta" />
             <div className="social">
               <img src={instagram} alt="Logo instagram" />
               <img src={whatsapp} alt="Logo whatsapp" />
               <img src={Facebook} alt="Logo facebook" />
             </div>
-          </DivSocial>
-          <ListAbout>
+          </DivList>
+          <DivList>
             <h1>Sobre nós</h1>
             <ul>
               <li>Quem somos</li>
@@ -51,16 +47,16 @@ export const Footer = () => {
               <li>Seja um afiliado</li>
               <li>Trabalhe com a gente</li>
             </ul>
-          </ListAbout>
-          <ListAccount>
+          </DivList>
+          <DivList>
             <h1>Minha conta</h1>
             <ul>
               <li>Meus Dados</li>
               <li>Meus Pedidos</li>
               <li>Login</li>
             </ul>
-          </ListAccount>
-          <ListSuport>
+          </DivList>
+          <DivList>
             <h1>Suporte e políticas</h1>
             <ul>
               <li>Trocas e Devoluções</li>
@@ -68,11 +64,11 @@ export const Footer = () => {
               <li>Fale Conosco</li>
               <li>Super Natal</li>
             </ul>
-          </ListSuport>
-          <DivPayment>
-            <ImgPayment>
+          </DivList>
+          <DivList>
+            <ImgPaymentSecurity>
               <h1>Formas de pagamento</h1>
-              <div className="imagesPayment">
+              <div className="imagesPaymentSecurity">
                 <img src={visa} alt="Visa" />
                 <img src={master} alt="Master" />
                 <img src={hiper} alt="Hiper" />
@@ -81,27 +77,27 @@ export const Footer = () => {
                 <img src={elo} alt="Elo" />
                 <img src={boleto} alt="Boleto" />
               </div>
-            </ImgPayment>
-            <ImgSecurity>
-              <h1>Segurança</h1>
-              <div className="imagesSecurity">
+            </ImgPaymentSecurity>
+            <ImgPaymentSecurity>
+              <h1 className="titleSecurity">Segurança</h1>
+              <div className="imagesPaymentSecurity">
                 <img src={vtex} alt="Logo vtex" />
                 <img src={encrypt} alt="Logo encript" />
               </div>
-            </ImgSecurity>
-          </DivPayment>
+            </ImgPaymentSecurity>
+          </DivList>
         </FirstDiv>
-        <hr></hr>
+        <DivHr></DivHr>
         <SecondDiv>
           <p>
             Somos Sonho LTA - Estrada do Campo D'areia, 182 - Pechincha - Rio de
             Janeiro/RJ - CEP: 22.743-310 CNPJ:28.445.729/0081-75 | © 2024 Todos
             dos direitos reservados
           </p>
-          <imgDiv>
+          <ImgDiv>
             <img src={wicomm} alt="Logo wicomm" />
             <img src={vtexGray} alt="Logo vtex" />
-          </imgDiv>
+          </ImgDiv>
         </SecondDiv>
       </FooterContainer>
     </>
