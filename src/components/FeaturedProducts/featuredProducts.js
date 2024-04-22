@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const FeaturedProductsContainer = styled.section`
   display: flex;
   background-color: var(--white);
-  padding: 32px 56px 32px 0px;
+  padding: 40px 56px 40px 0px;
 `;
 
 export const DivSection = styled.div`

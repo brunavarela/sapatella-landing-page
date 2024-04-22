@@ -23,6 +23,7 @@ import favorite3 from "../../assets/img/favorite3.jpg";
 import favorite4 from "../../assets/img/favorite4.jpg";
 import { useDispatch } from "react-redux";
 import { addToCartThunk } from "../../store/modules/cart/thunks";
+import { toast } from "react-toastify";
 
 export const Favorites = () => {
   const dispatch = useDispatch();
@@ -103,6 +104,19 @@ export const Favorites = () => {
     });
   };
 
+  const handleAddToCart = (product) => {
+    dispatch(addToCartThunk(product));
+    toast.success("Produto adicionado com sucesso", {
+      position: "top-right",
+      autoClose: 3000,
+      hideProgressBar: true,
+      closeOnClick: true,
+      pauseOnHover: false,
+      draggable: true,
+      progress: undefined,
+    });
+  };
+
   return (
     <>
       <SectionTitle>Favoritos da semana</SectionTitle>
@@ -171,7 +185,7 @@ export const Favorites = () => {
                           </div>
                         </div>
                       </DivSize>
-                      <Button onClick={() => dispatch(addToCartThunk(product))}>
+                      <Button onClick={() => handleAddToCart(product)}>
                         Adicionar à sacola
                       </Button>
                     </ImageOverlay>

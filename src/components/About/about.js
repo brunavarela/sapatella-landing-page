@@ -5,7 +5,7 @@ export const AboutContainer = styled.section`
   justify-content: center;
   width: 100%;
   background-color: var(--white);
-  padding: 32px 155px;
+  padding: 0px 155px;
   margin-top: 72px;
 `;
 

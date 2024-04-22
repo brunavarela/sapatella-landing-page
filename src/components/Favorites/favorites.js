@@ -10,7 +10,7 @@ export const FavoritesContainer = styled.section`
   display: flex;
   justify-content: center;
   background-color: var(--white);
-  padding: 32px 56px;
+  padding: 32px 56px 0px 56px;
 `;
 
 export const DivList = styled.div`
@@ -202,4 +202,5 @@ export const DivFooter = styled.div`
   width: 100%;
 
   padding: 24px;
+  padding-bottom: 0px;
 `;

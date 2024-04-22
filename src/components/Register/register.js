@@ -6,6 +6,7 @@ export const RegiterContainer = styled.div`
   width: 100%;
   height: 148px;
   padding: 34px 254px;
+  margin-top: 72px;
 `;
 
 export const Title = styled.div`

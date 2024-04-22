@@ -21,8 +21,13 @@ import dots from "../../assets/icons/dots.svg";
 import favorite1 from "../../assets/img/favorite1.jpg";
 import favorite2 from "../../assets/img/favorite2.jpg";
 import image7 from "../../assets/img/image7.jpg";
+import { useDispatch } from "react-redux";
+import { addToCartThunk } from "../../store/modules/cart/thunks";
+import { toast } from "react-toastify";
 
 export const FeaturedProducts = () => {
+  const dispatch = useDispatch();
+  
   const handleClick = (index) => {
     const updatedHeartClicked = [...heartClicked];
     updatedHeartClicked[index] = !updatedHeartClicked[index];
@@ -79,6 +84,19 @@ export const FeaturedProducts = () => {
       updatedSizes[index] =
         (prevSizes[index] + 1) % products[index].size.length;
       return updatedSizes;
+    });
+  };
+
+  const handleAddToCart = (product) => {
+    dispatch(addToCartThunk(product));
+    toast.success("Produto adicionado com sucesso", {
+      position: "top-right",
+      autoClose: 3000,
+      hideProgressBar: true,
+      closeOnClick: true,
+      pauseOnHover: false,
+      draggable: true,
+      progress: undefined,
     });
   };
 
@@ -153,7 +171,9 @@ export const FeaturedProducts = () => {
                             </div>
                           </div>
                         </DivSize>
-                        <Button>Adicionar à sacola</Button>
+                        <Button onClick={() => handleAddToCart(product)}>
+                          Adicionar à sacola
+                        </Button>
                       </ImageOverlay>
                     )}
                   </ImageWrapper>

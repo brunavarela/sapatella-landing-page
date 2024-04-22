@@ -11,7 +11,7 @@ export const CategoryContainer = styled.section`
   justify-content: center;
   width: 100%;
   background-color: var(--white);
-  padding: 32px 56px;
+  padding: 32px 56px 0px 56px;
 `;
 
 export const DivList = styled.div`

@@ -97,7 +97,7 @@ export const IconButtons = styled.div`
       font-size: 10px;
       width: 14px;
       border-radius: 100%;
-      padding: 1px 4px;
+      padding: 1px;
       position: absolute;
       top: -5px;
       right: -5px;
