@@ -8,9 +8,9 @@ import {
 } from "./header.js";
 import logoBranca from "../../assets/general/logo-branca.png";
 import searchIcon from "../../assets/icons/search.svg";
-import userIcon from "../../assets/icons/user.svg";
-import heartIcon from "../../assets/icons/heart.svg";
-import cartIcon from "../../assets/icons/shopping-cart.svg";
+import { BiUser } from "react-icons/bi";
+import { SlHeart } from "react-icons/sl";
+import { BsCart2 } from "react-icons/bs";
 
 export const Header = () => {
   return (
@@ -32,13 +32,13 @@ export const Header = () => {
           </InputContainer>
           <IconButtons>
             <button aria-label="Conta">
-              <img src={userIcon} alt="Conta" />
+              <BiUser />
             </button>
             <button aria-label="Favoritos">
-              <img src={heartIcon} alt="Favoritos" />
+              <SlHeart />
             </button>
             <button aria-label="Carrinho">
-              <img src={cartIcon} alt="Carrinho" />
+              <BsCart2 />
             </button>
           </IconButtons>
         </DivHeader>

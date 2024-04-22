@@ -82,10 +82,11 @@ export const IconButtons = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
+    color: var(--white);
+    font-size: 24px;
 
-    img {
-      width: 24px;
-      height: 24px;
+    :hover {
+      color: var(--pink);
     }
   }
 `;
