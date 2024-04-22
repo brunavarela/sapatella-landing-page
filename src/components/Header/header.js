@@ -78,15 +78,29 @@ export const IconButtons = styled.div`
   button {
     background: none;
     border: none;
-    cursor: pointer;
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
     color: var(--white);
     font-size: 24px;
+    cursor: pointer;
 
     :hover {
       color: var(--pink);
+    }
+
+    .cartLength {
+      text-align: center;
+      background: var(--pink);
+      color: var(--white);
+      font-size: 10px;
+      width: 14px;
+      border-radius: 100%;
+      padding: 1px 4px;
+      position: absolute;
+      top: -5px;
+      right: -5px;
     }
   }
 `;

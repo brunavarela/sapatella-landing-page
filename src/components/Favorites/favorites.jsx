@@ -21,9 +21,12 @@ import favorite1 from "../../assets/img/favorite1.jpg";
 import favorite2 from "../../assets/img/favorite2.jpg";
 import favorite3 from "../../assets/img/favorite3.jpg";
 import favorite4 from "../../assets/img/favorite4.jpg";
-
+import { useDispatch } from "react-redux";
+import { addToCartThunk } from "../../store/modules/cart/thunks";
 
 export const Favorites = () => {
+  const dispatch = useDispatch();
+
   const handleClick = (index) => {
     const updatedHeartClicked = [...heartClicked];
     updatedHeartClicked[index] = !updatedHeartClicked[index];
@@ -168,7 +171,9 @@ export const Favorites = () => {
                           </div>
                         </div>
                       </DivSize>
-                      <Button>Adicionar à sacola</Button>
+                      <Button onClick={() => dispatch(addToCartThunk(product))}>
+                        Adicionar à sacola
+                      </Button>
                     </ImageOverlay>
                   )}
                 </ImageWrapper>

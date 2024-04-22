@@ -1,3 +1,4 @@
+import { useSelector } from "react-redux";
 import {
   HeaderContainer,
   DivHeader,
@@ -13,6 +14,8 @@ import { SlHeart } from "react-icons/sl";
 import { BsCart2 } from "react-icons/bs";
 
 export const Header = () => {
+  const cart = useSelector((state) => state.productsCart);
+
   return (
     <>
       <HeaderContainer>
@@ -38,6 +41,7 @@ export const Header = () => {
               <SlHeart />
             </button>
             <button aria-label="Carrinho">
+              <div className="cartLength">{cart.length}</div>
               <BsCart2 />
             </button>
           </IconButtons>
