@@ -34,6 +34,11 @@ export const FirstDiv = styled.div`
     font-size: 14px;
     color: var(--dark-gray);
   }
+
+  li:hover {
+    text-decoration:underline;
+    cursor: pointer;
+  }
 `;
 
 export const DivList = styled.div`
@@ -44,6 +49,10 @@ export const DivList = styled.div`
     display: flex;
     margin-top: 32px;
     gap: 32px;
+  }
+
+  .socialIcons {
+    cursor: pointer;
   }
 `;
 

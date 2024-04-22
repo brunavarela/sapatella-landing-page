@@ -31,9 +31,9 @@ export const Footer = () => {
           <DivList>
             <img src={logoPreta} alt="Logo Sapatella preta" />
             <div className="social">
-              <img src={instagram} alt="Logo instagram" />
-              <img src={whatsapp} alt="Logo whatsapp" />
-              <img src={Facebook} alt="Logo facebook" />
+              <img className="socialIcons" src={instagram} alt="Logo instagram" />
+              <img className="socialIcons" src={whatsapp} alt="Logo whatsapp" />
+              <img className="socialIcons" src={Facebook} alt="Logo facebook" />
             </div>
           </DivList>
           <DivList>
