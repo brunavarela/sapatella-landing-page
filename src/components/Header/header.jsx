@@ -1,5 +1,6 @@
 import {
   HeaderContainer,
+  DivHeader,
   InputContainer,
   Input,
   Icon,
@@ -15,30 +16,32 @@ export const Header = () => {
   return (
     <>
       <HeaderContainer>
-        <img src={logoBranca} />
-        <nav>
-          <a>Novidades</a>
-          <a>Sapatos</a>
-          <a>Sandálias</a>
-          <a>Tênis</a>
-          <a>Bolsa & Acessórios</a>
-          <a id="off">OFF</a>
-        </nav>
-        <InputContainer>
-          <Input placeholder="Buscar" />
-          <Icon src={searchIcon} alt="Search" />{" "}
-        </InputContainer>
-        <IconButtons>
-          <button aria-label="Conta">
-            <img src={userIcon} alt="Conta" />
-          </button>
-          <button aria-label="Favoritos">
-            <img src={heartIcon} alt="Favoritos" />
-          </button>
-          <button aria-label="Carrinho">
-            <img src={cartIcon} alt="Carrinho" />
-          </button>
-        </IconButtons>
+        <DivHeader>
+          <img src={logoBranca} />
+          <nav>
+            <a>Novidades</a>
+            <a>Sapatos</a>
+            <a>Sandálias</a>
+            <a>Tênis</a>
+            <a>Bolsa & Acessórios</a>
+            <a id="off">OFF</a>
+          </nav>
+          <InputContainer>
+            <Input placeholder="Buscar" />
+            <Icon src={searchIcon} alt="Search" />{" "}
+          </InputContainer>
+          <IconButtons>
+            <button aria-label="Conta">
+              <img src={userIcon} alt="Conta" />
+            </button>
+            <button aria-label="Favoritos">
+              <img src={heartIcon} alt="Favoritos" />
+            </button>
+            <button aria-label="Carrinho">
+              <img src={cartIcon} alt="Carrinho" />
+            </button>
+          </IconButtons>
+        </DivHeader>
       </HeaderContainer>
     </>
   );

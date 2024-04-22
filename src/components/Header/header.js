@@ -4,13 +4,9 @@ export const HeaderContainer = styled.div`
   width: 100%;
   padding: 16px 56px;
   display: flex;
-  position: absolute; 
-  z-index: 1; 
-  justify-content: space-between;
-  align-items: center;
-  padding-left: 56px;
-  padding-right: 56px;
-  
+  justify-content: center;
+  position: absolute;
+  z-index: 1;
 
   background: linear-gradient(
     to bottom,
@@ -34,6 +30,14 @@ export const HeaderContainer = styled.div`
       color: var(--pink);
     }
   }
+`;
+
+export const DivHeader = styled.div`
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1445px;
 `;
 
 export const InputContainer = styled.div`
